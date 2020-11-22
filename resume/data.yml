@@ -1,43 +1,37 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Rudra
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Sharma
+about: Hi, my name is Rudra Sharma. I’m a 4th year software engineering student from Toronto, ON currently 
+       working as a Backend Developer at IBM. I am interested in software development alongside data analysis.
+       I have experience working with Java, PHP, VB.NET, and Python and currently learning Node.JS frameworks.
 
-birth:
-  year: 1990
-  location: New York
+
+position: Aspiring Software Developer
+
+# birth:
+#   year: 1998
+#   location: Somewhere
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
-
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
-
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: IBM Canada
+  position: Backend Developer Intern
+  timeperiod: May 2019 - Present
+  description: Release Team
+  list:
+   - Worked on a team utilizing the Agile methodology to release Db2 to customers
+   - Developed a Quality Assurance Dashboard using Cognos Analytics as the frontend and Db2 databases as the backend.
+   - Created data sync scripts in Python using Github API as the datasource and syncing with Db2 database using Db2 CLI.
+   - Responsible for releasing Db2 Early Access Program every month alongside managing client issues.
+   - Conducted the NLV Cycle for 2 releases of Db2
+  # website: https://www.ibm.com/ca-en
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Honours Bachelor of Engineering, Specializing in Software Engineering
+  timeperiod: Lassonde School of Engineering, York University, Toronto, ON
+  description: Expected to graduate early 2022
+  # website: https://example.com
 
 # skill level goes 0 to 100
 skills:
@@ -49,23 +43,54 @@ skills:
   level: 97
 - name: Node.js
   level: 93
-- name: Angular 2
+- name: Vue
   level: 60
-- name: TypeScript
+- name: Python
   level: 80
-- name: ES.Next
+- name: Java
   level: 70
+- name: PHP
+  level: 99
+- name: C
+  level: 99
+- name: VB.NET
+  level: 99
+- name: Db2
+  level: 99
+- name: MySQL
+  level: 99
+- name: MongoDB
+  level: 99
+- name: Windows
+  level: 99
+- name: Linux
+  level: 99
 - name: Docker
+  level: 99
+- name: AWS
+  level: 99
+- name: Git
+  level: 99
+- name: Cognos Analytics
+  level: 99
+- name: Postman
+  level: 99
+- name: Android Studio
   level: 99
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
 
 projects:
-- name: best-resume-ever
-  platform: Vue
+- name: Lyrics API
+  platform: Vue, NodeJS, MongoDB, IBM Carbon Design System, Swagger, Python
   timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+  description: A web application that serves as a way to provide lyrics to songs in the form of an API. The frontend made in VueJS using the Carbon Design System consists of a website explaining the api, the documentation behind the api calls as well as a way for users to create an account to request keys for api authentication etc. The backend service is maintained using express and consists entirely of api calls and returned requests. A python script in the backend is also active which scrapes the lyrics for songs matching a particular keyword and adds to the mongoDB database which is accessed by the api. 
+  url: https://github.com/poisonflame/lyrics_api
+
+- name: Schedule Manager
+  platform: Android Studio, Java, Sqlite
+  description: Schedule Manager is an android app created in Android Studio using Java that helps track working schedule for part time workers and provides basic stats on a week-to-week and monthly basis. Additionally, the users can also use the app to calculate paycheck earnings with and without tax based on their inserted schedule and other basic salary info. All information entered by the user is saved locally onto the device through a local sqlite database file.
+  url: https://github.com/PoisonFlame/ScheduleManager
 
 hobbies:
 - name: Video Games
@@ -82,12 +107,13 @@ contributions:
   url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: robbysharma@me.com
+  phone: 204-721-1971
+  # street: 1234 Broadway
+  # city: New York
+  website: https://rpsh.me
+  github: poisonflame
+  linkedin: rudra-sharma
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `

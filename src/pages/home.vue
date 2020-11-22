@@ -142,6 +142,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool-modified'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool.png" />
+          <span>green</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>
