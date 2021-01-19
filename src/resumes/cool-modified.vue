@@ -28,6 +28,90 @@
         </div>
 
         <div
+          v-if="person.webSkills"
+          class="section">
+          <div class="section-headline">
+              Web Development
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.webSkills"
+              class="grid-item"
+              :key="index"
+              :class="{ link: skill.url !== undefined}"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          v-if="person.softwareSkills"
+          class="section">
+          <div class="section-headline">
+              Software Development
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.softwareSkills"
+              class="grid-item"
+              :key="index"
+              :class="{ link: skill.url !== undefined}"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          v-if="person.databaseSkills"
+          class="section">
+          <div class="section-headline">
+              Databases
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.databaseSkills"
+              class="grid-item"
+              :key="index"
+              :class="{ link: skill.url !== undefined}"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          v-if="person.systemSkills"
+          class="section">
+          <div class="section-headline">
+              Systems and Tools
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.systemSkills"
+              class="grid-item"
+              :key="index"
+              :class="{ link: skill.url !== undefined}"
+              :href="skill.url">
+              <span class="squarred-grid-item">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- <div
           v-if="person.skills"
           class="section">
           <div class="section-headline">
@@ -46,7 +130,7 @@
               </span>
             </a>
           </div>
-        </div>
+        </div> -->
 
         <div class="section">
           <div class="section-headline">
@@ -124,7 +208,8 @@
               <ul v-if="experience.list" >
                 <li v-for="(item, index) in experience.list" :key="index">
                   <span class="section-content__text--light">
-                    {{item}}
+                    <span v-html="item"></span>
+                    <!-- {{item}} -->
                   </span>
                 </li>
             </ul>
@@ -161,14 +246,26 @@
           </div>
 
           <div class="section-content">
-            <a v-for="(project, index) in person.projects" :key="index"
+            <div v-for="(project, index) in person.projects" :key="index"
               class="section-content__item"
-              :class="{ link: project.url !== undefined}"
-              :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__subheader">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
-            </a>
+              
+              >
+              <span class="section-content__header">
+              <a :class="{ link: project.url !== undefined}" :href="project.url">
+              {{ project.name }} 
+              </a>
+              </span>
+              <span class="section-content__subheader"><b>Created with:</b> {{ project.platform }}</span>
+              <span v-if="project.description" class="section-content__text"> {{ project.description }} </span>
+              <ul v-if="project.points" >
+                <li v-for="(item, index) in project.points" :key="index">
+                  <span class="section-content__text--light">
+                    <span v-html="item"></span>
+                    <!--{{item}}-->
+                  </span>
+                </li>
+            </ul>
+            </div>
           </div>
         </div>
 
@@ -263,6 +360,10 @@ export default Vue.component(name, getVueOptions(name));
     color:white
 }
 
+// .section-content__header{
+//   font-size: 1.4em !important;
+// }
+
 .picture {
   position: absolute;
   top: @banner-height - @picture-offset;
@@ -328,7 +429,7 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .section {
-  margin: 20px 0;
+  margin: 16px 0;
 }
 
 .section-link,

@@ -3,12 +3,12 @@ name:
   first: Rudra
   middle:
   last: Sharma
-about: Hi, my name is Rudra Sharma. I’m a 4th year software engineering student from Toronto, ON currently 
+about: I’m a 4th year software engineering student from Toronto, ON currently 
        working as a Backend Developer at IBM. I am interested in software development alongside data analysis.
-       I have experience working with Java, PHP, VB.NET, and Python and currently learning Node.JS frameworks.
+       I have experience working with Java, PHP, VB.NET, and Python and currently exploring javascript frameworks.
 
 
-position: Aspiring Software Developer
+position: Backend Developer Intern
 
 # birth:
 #   year: 1998
@@ -20,11 +20,11 @@ experience:
   timeperiod: May 2019 - Present
   description: Release Team
   list:
-   - Worked on a team utilizing the Agile methodology to release Db2 to customers
-   - Developed a Quality Assurance Dashboard using Cognos Analytics as the frontend and Db2 databases as the backend.
-   - Created data sync scripts in Python using Github API as the datasource and syncing with Db2 database using Db2 CLI.
-   - Responsible for releasing Db2 Early Access Program every month alongside managing client issues.
-   - Conducted the NLV Cycle for 2 releases of Db2
+   - Worked on a team utilizing the <b>Agile</b> methodology to release <b>Db2</b> to customers
+   - Developed a Quality Assurance Dashboard using <b>Cognos Analytics</b> as the frontend and Db2 databases as the backend.
+   - Created data sync scripts in <b>Python</b> using <b>Github API</b> as the data source and syncing with Db2 database using <b>Db2 CLI</b>.
+   - Responsible for releasing Db2 Early Access Program every month alongside managing customer issues.
+   - Conducted NLV(National Language Verification) cycles for 2 major releases of Db2
   # website: https://www.ibm.com/ca-en
 
 education:
@@ -32,6 +32,60 @@ education:
   timeperiod: Lassonde School of Engineering, York University, Toronto, ON
   description: Expected to graduate early 2022
   # website: https://example.com
+
+webSkills:
+- name: HTML5
+  level: 99
+- name: CSS3
+  level: 95
+- name: JavaScript
+  level: 97
+- name: Node.JS
+  level: 93
+- name: Vue.JS
+  level: 60
+- name: React.JS
+  level: 66
+- name: PHP
+  level: 99
+
+softwareSkills:
+- name: Python
+  level: 80
+- name: Java
+  level: 70
+- name: C
+  level: 99
+- name: VB.NET
+  level: 99
+
+databaseSkills:
+- name: Db2
+  level: 99
+- name: MySQL
+  level: 99
+- name: MongoDB
+  level: 99
+
+systemSkills:
+- name: Windows
+  level: 99
+- name: Linux
+  level: 99
+- name: Docker
+  level: 99
+- name: AWS
+  level: 99
+- name: Git
+  level: 99
+- name: Cognos Analytics
+  level: 99
+- name: Postman
+  level: 99
+- name: Jenkins
+  level: 99
+- name: Android Studio
+  level: 99
 
 # skill level goes 0 to 100
 skills:
@@ -77,20 +131,48 @@ skills:
   level: 99
 - name: Android Studio
   level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+knowledge: Some of my projects include making a web-based lyrics api to fetch lyrics for songs, making a schedule manager android app to manage part time job schedules,
+           as well as a report card comment generator that allows teachers to generate report card comments for students in their class based on their grades.  
 
 projects:
+
+- name: GPA Converter / Grade Calculator
+  platform: React.JS, Node.JS, Bootstrap, Puppeteer, Docker
+  # description: Report Card Comment Generator is an app made in VB.NET that was made for teachers to generate report card comments for students within a few click and saving the teachers time. The app took a file with student names and grades as an input and the output was a list of comments for the student. The app also was catered towards a report card logging service called HomeLogic and worked to export the comments directly to the Homelogic service once they were generated. The generation used libraries such as NHunspell to generate unique comments using different words.
+  points:
+    - This is a <b>dockerized</b> web application that converts York University's 9.0 GPA Scale to the 4.0 GPA Scale. Additionally, it also helps to calculate grades. 
+    - The frontend uses <b>ReactJS</b> to calculate and render the GPA where as the backend is maintained using <b>ExpressJS</b> which is used optionally to scrape data straight from York's grades page using <b>puppeteer</b> which is outputted back to the frontend using <b>JSON</b>.  
+    - The app further consists of saving/importing features to save data locally as JSON to be able to recalculate in further sessions.  
+  url: https://gpa.rpsh.me
+
 - name: Lyrics API
-  platform: Vue, NodeJS, MongoDB, IBM Carbon Design System, Swagger, Python
+  platform: Vue.JS, Node.JS, MongoDB, IBM Carbon Design System, Swagger, Python
   timeperiod: February 2016
-  description: A web application that serves as a way to provide lyrics to songs in the form of an API. The frontend made in VueJS using the Carbon Design System consists of a website explaining the api, the documentation behind the api calls as well as a way for users to create an account to request keys for api authentication etc. The backend service is maintained using express and consists entirely of api calls and returned requests. A python script in the backend is also active which scrapes the lyrics for songs matching a particular keyword and adds to the mongoDB database which is accessed by the api. 
-  url: https://github.com/poisonflame/lyrics_api
+  # description: A web application that serves as a way to provide lyrics to songs in the form of an API. The frontend made in VueJS using the Carbon Design System consists of a website explaining the api, the documentation behind the api calls as well as a way for users to create an account to request keys for api authentication etc. The backend service is maintained using express and consists entirely of api calls and returned requests. A python script in the backend is also active which scrapes the lyrics for songs matching a particular keyword and adds to the mongoDB database which is accessed by the api. 
+  points:
+    - Lyrics API is as a <b>dockerized</b> web application that provides lyrics to songs in the form of <b>API</b> requests.
+    - Frontend of the web application is made in <b>Vue</b> using the <b> IBM Carbon Design System</b> providing users with API documentation alongside API key management service. 
+    - The backend service is maintained using <b>ExpressJS</b> and consists entirely of api calls and returned requests. 
+    - <b>Python</b> scripts in the backend also act to <b>scrape</b> the lyrics for songs from Genius.com using the <b>BeautifulSoup</b> library and then adding the data to the <b>MongoDB</b> database which is then accessible by the end-users through api calls. 
+  url: https://lyrics.rpsh.me
 
 - name: Schedule Manager
   platform: Android Studio, Java, Sqlite
-  description: Schedule Manager is an android app created in Android Studio using Java that helps track working schedule for part time workers and provides basic stats on a week-to-week and monthly basis. Additionally, the users can also use the app to calculate paycheck earnings with and without tax based on their inserted schedule and other basic salary info. All information entered by the user is saved locally onto the device through a local sqlite database file.
+  # description: Schedule Manager is an android app created in Android Studio using Java that helps track working schedule for part time workers and provides basic stats on a week-to-week and monthly basis. Additionally, the users can also use the app to calculate paycheck earnings with and without tax based on their inserted schedule and other basic salary info. All information entered by the user is saved locally onto the device through a local sqlite database file.
+  points:
+    - Schedule Manager is an android app created in <b>Android Studio</b> using <b>Java</b> that helps track working schedule for part time workers and provides basic stats on a week-to-week and monthly basis.
+    - Additionaly, it provides functionality allowing users to calculate paycheck earnings accounting for tax amongst other features.
+    - Leverages local <b>sqlite database</b> to store all user information.
   url: https://github.com/PoisonFlame/ScheduleManager
+
+# - name: Report Card Comment Generator
+#   platform: VB.NET, NHunspell Library
+#   # description: Report Card Comment Generator is an app made in VB.NET that was made for teachers to generate report card comments for students within a few click and saving the teachers time. The app took a file with student names and grades as an input and the output was a list of comments for the student. The app also was catered towards a report card logging service called HomeLogic and worked to export the comments directly to the Homelogic service once they were generated. The generation used libraries such as NHunspell to generate unique comments using different words.
+#   points:
+#     - Report Card Comment Generator is a desktop app made in <b>VB.NET</b> for teachers to generate report card comments for students with ease.
+#     - The app was also catered towards a report card logging service called <b>HomeLogic</b> and worked to export the comments directly to the Homelogic service once they were generated. 
+#     - Libraries such as <b>NHunspell</b> were used to aid the generation of unique comments.
+#   url: https://github.com/PoisonFlame/CommentGenerator 
 
 hobbies:
 - name: Video Games
